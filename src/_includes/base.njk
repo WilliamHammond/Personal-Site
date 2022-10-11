@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <title>{{ title }}</title>
     </head>
     <body>
@@ -26,5 +27,28 @@
         <main>
             {{ content | safe}}
         </main>
+
+        <footer class="social-footer">
+            <div class="social-footer-icons">
+                <ul class="menu simple">
+                    <li>
+                        <a href="https://www.linkedin.com/in/williamhammondse/">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/williamhammond">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://itch.io/profile/williamhammond">
+                            <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
     </body>
 </html>
