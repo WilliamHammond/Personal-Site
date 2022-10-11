@@ -18,16 +18,7 @@
       "eslint --fix",
       "eslint"
     ],
-    "*.json": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
-    ],
-    "*.css": [
-      "prettier --write"
-    ],
-    "*.njk": [
+    "*.{json, md, css, njk}": [
       "prettier --write"
     ]
   },
