@@ -1,8 +1,6 @@
 ---
 title: Resume 
-layout: "base.njk"
 eleventyNavigation:
   key: Resume
+  url: /resume/william-hammond-resume.pdf
 ---
-
-# Resume
