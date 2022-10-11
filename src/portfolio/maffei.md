@@ -3,13 +3,11 @@ title: maffei
 layout: "base.njk"
 ---
 
-Maffei 
-=======
+# Maffei 
 
 Maffei is a single level, networked coop shooter where players defend humanity against AI invaders. The project is written in a combination of C++ and blueprint code for Unreal Engine 4. Full source code and be viewed here https://github.com/williamhammond/CoopGame/.
 
-Overview
---------
+## Overview
 
 The game starts with a basic loading screen seen here:
 
@@ -21,8 +19,7 @@ I should probably add an indication to the player on what to do next, but the on
 
 And an unsuccessful run will look like this:
 
-Mechanics
----------
+## Mechanics
 
 ### **Game Modes**
 
@@ -32,8 +29,7 @@ Aside from the primary level's game mode, I also implemented a wave mechanic whe
 
 There are two implemented enemies, the "tracker bot" and an AI version of the player cleverly named the "Shooter Bot." The Shooter Bot uses Unreal's behavior tree, environment query system, and decorator system to implement its logic. The tracker bot uses the environment query system to find the nearest player and basic physics to roll it towards the player.
 
-Issues and Learning
--------------------
+## Issues and Learning
 
 ### **Project Organization**
 
@@ -43,7 +39,7 @@ The original layout for the project I inherited from the course structure was pr
 
 ![](https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/11c988e5-5379-47c7-a18d-35b34da58b95/redirector-meme.PNG)
 
-Even while trying to re-read the documentation on redirectors for this post, I ended up encountering a redirect bug for [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors)  to [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/) which landed me here: 
+Even while trying to re-read the documentation on redirectors for this post, I ended up encountering a redirect bug for [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors)  to [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/) which landed me here:
 
 <img src="https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/e347bfb5-8d86-44fa-acf5-793db77cbf70/redirect-documentation-bug.PNG" alt="" />
 
@@ -65,9 +61,9 @@ Asset Organization
 
 ### **Blueprints and Visual Programming**
 
-The relationship between Unreal's visual programming system and code probably surprised me the most. I started with the bias that the blueprint system's primary use case was to make working in Unreal more accessible. It does make scripting the engine more accessible, but I found myself using it for quick debugging and prototyping. It also affects the way you think about structuring your code. Even working on a solo project, I thought about how I'd structure the code to make it easier for game designers to iterate. Questions like, "What should be exposed as a blueprint variable?", "Should these methods be primarily implementable as blueprints?" and "Is this being overengineered for blueprints?" kept coming up as I implemented things like different weapon types.  
-  
-I also found blueprints particularly useful for implementing UI, although all my UI was very simple.  
+The relationship between Unreal's visual programming system and code probably surprised me the most. I started with the bias that the blueprint system's primary use case was to make working in Unreal more accessible. It does make scripting the engine more accessible, but I found myself using it for quick debugging and prototyping. It also affects the way you think about structuring your code. Even working on a solo project, I thought about how I'd structure the code to make it easier for game designers to iterate. Questions like, "What should be exposed as a blueprint variable?", "Should these methods be primarily implementable as blueprints?" and "Is this being overengineered for blueprints?" kept coming up as I implemented things like different weapon types.
+
+I also found blueprints particularly useful for implementing UI, although all my UI was very simple.
 
 Another difficulty with blueprints was keeping them readable. Bad blueprints literally become spaghetti code.
 
@@ -101,14 +97,13 @@ Screen Switching Logic
 
 Testing games is much different than testing other types of software. I've experimented with Unity's testing framework's but not Unreal's. I primarily relied on manual tests and Rider's debugger and print statements. For more specialized things like EQS and behavior trees, I learned how to set breakpoints, visually follow the execution of the tree, and set flags to get more information out of EQS as the game AI was making decisions. The most significant new skill I learned was how to include configurable "visual logging," where I could see what different systems were doing.
 
-Credits
--------
+## Credits
 
 I still need to add this to the game itself but thanks to everyone that made the free/reasonably priced art that made this feel like kind of a real game
 
-*   https://www.unrealengine.com/marketplace/en-US/product/journeyman-s-minimap
-*   https://www.unrealengine.com/marketplace/en-US/product/etasphera85
-*   https://www.unrealengine.com/marketplace/en-US/product/sci-fi-space-soldier-female
-*   https://freesound.org/people/Zovex/sounds/237974/
-*   https://freesound.org/people/Romariogrande/sounds/396231/
-*   https://freesound.org/people/Yoyodaman234/sounds/166507/
+- https://www.unrealengine.com/marketplace/en-US/product/journeyman-s-minimap
+- https://www.unrealengine.com/marketplace/en-US/product/etasphera85
+- https://www.unrealengine.com/marketplace/en-US/product/sci-fi-space-soldier-female
+- https://freesound.org/people/Zovex/sounds/237974/
+- https://freesound.org/people/Romariogrande/sounds/396231/
+- https://freesound.org/people/Yoyodaman234/sounds/166507/
