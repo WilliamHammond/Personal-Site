@@ -3,6 +3,7 @@ title: CV
 layout: "base.njk"
 eleventyNavigation:
   key: CV
+  order: 1
 ---
 
 # CV

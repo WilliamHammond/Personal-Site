@@ -3,9 +3,12 @@ title: Tools
 layout: "base.njk"
 eleventyNavigation:
   key: Tools
+  order: 4
 ---
 
 # Tools
+
+This is a list of tools I enjoy so that I can find the links when I need them. 
 
 - Programming
   - [Cmder](https://cmder.app/)

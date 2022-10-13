@@ -3,6 +3,7 @@ title: Portfolio
 layout: "base.njk"
 eleventyNavigation:
   key: Portfolio
+  order: 3
 ---
 
 ## [Unity RTS](/portfolio/unityrts)
