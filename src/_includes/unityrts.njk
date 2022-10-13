@@ -1,0 +1,50 @@
+---
+layout: base.njk
+---
+
+<main>
+    <h1>Unity RTS</h1>
+    <p>The mechanics are straightforward; you’re given a single resource, “oil,” and you can make tanks.
+If you lose your main base, you lose.
+The last player standing wins.
+The full source can be found here https://github.com/williamhammond/RealTimeStrategy.</p>
+    <h2>Overview</h2>
+    <p>The game starts with a simple lobby screen.</p>
+    {% addVideo "/assets/portfolio/unityrts/game-start.mp4"  %}
+    <p>The player can construct &quot;oil rigs&quot; to get more resources per second and production building to generate more tanks.
+There is a constraint that buildings must be placed within a certain distance to their main base.</p>
+    {% addVideo "/assets/portfolio/unityrts/unit-creation.mp4"  %}
+    <p>Pathing is solved using Unity's <a href="https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html">NavMeshAgent</a>.
+Nothing clever is done to prevent groups of units from splitting around obstacles.</p>
+    {% addVideo "/assets/portfolio/unityrts/pathing.mp4"  %}
+    <p>Buildings and units can be destroyed. If you lose your main base, you lose.</p>
+    {% addVideo "/assets/portfolio/unityrts/game-over.mp4"  %}
+    <h2>Networking</h2>
+    <h3>Mirror</h3>
+    <p>The network library I used for this is an open-source project, <a href="https://mirror-networking.gitbook.io/docs/">Mirror</a>.
+It follows a client-server architecture with SyncVars (Synchronized variables) and RPCs (Remote Procedure Calls) as the primary building blocks.
+The game is run with a dedicated server or under a host.
+Generally, I have authority checks that ensure core logic is only run on the host server and the state is replicated to the clients.
+Although, I wouldn't be surprised if there were still plenty of exploitable things on the client side.</p>
+    <p>The RPC model of Mirror meshes well with C#'s <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event">event</a> system.
+Take, for example, <a href="https://github.com/williamhammond/RealTimeStrategy/blob/main/Assets/Scripts/Buildings/GameoverHandler.cs#L49-L53">ClientOnGameOver</a>.
+Many things will get cleaned up on the client-side, and the players need to know the game's result.
+The UnitCommandHandler and UnitSelectionHandler are disabled, and the GameOverDisplay is rendered.
+The event system gives a tidy way to handle the fan-out of RPCs.
+When run on the server-side, the event system provides an easy-to-use <a href="https://gameprogrammingpatterns.com/event-queue.html">Event Queue</a> abstraction.</p>
+    <h3>Steam</h3>
+    <p>Mirror supports multiple transport layers, one of them being a Steam relay.
+This required minimal code changes and let's us use Steam's APIs for friend discovery and authentication while still keeping the networking peer-to-peer.</p>
+    {% addVideo "/assets/portfolio/unityrts/steam-clipped.mp4"  %}
+    <h2>Issues and Learning</h2>
+    <h3>C# and Scripting Model</h3>
+    <p>I expected Unity's C# scripting model to be easier than Unreal's C++/Blueprint system.
+However, I felt that blueprints were quicker and more natural for fast prototypes, the class model of Unreal's C++ code was a bit more straightforward, and the code felt more &quot;sturdy.&quot;
+Unity's live-reloading was nice, but it was pretty finicky, and I needed to configure it to avoid long pauses in the middle of playtesting.</p>
+    <h3>Minimap</h3>
+    <p>Implementing the minimap was more fun than I expected.
+A lot of the other logic in the game was very much general programming, just game themed or interacting with Unity's built-in systems like in the case of pathing.
+I couldn't lean on any of my experience with other types of programming while making the minimap, though.</p>
+    <p>It's implemented using a rectangular transform for ray-tracing to detect when a player has interacted with the minimap, a <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@2.1/api/Cinemachine.CinemachineVirtualCamera.html">virtual camera</a> to render the orthographic view of the player's vision, and icons for prefabs that give their minimap representation.</p>
+
+</main>
