@@ -22,7 +22,7 @@ table th {
 .nav {
   padding: 0;
   list-style: none;
-  display: flex; 
+  display: flex;
   margin-left: 1em;
 }
 .nav-item {
@@ -39,9 +39,14 @@ table th {
 .social-footer-icons {
   padding: 0;
   list-style: none;
-  display: flex; 
+  display: flex;
 }
 
-.social-footer-icon{
+.social-footer-icon {
   margin-right: 1em;
+}
+
+video {
+  height: 100%;
+  width: 100%;
 }

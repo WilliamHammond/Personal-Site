@@ -11,9 +11,11 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addShortcode("addVideo", function (url) {
     return `
-        <video height="auto" width="auto" controls="controls" onclick="this.play()">
+      <div class="video-container">
+        <video class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
             <source type="video/mp4" src="${url}#t=0.1">
         </video>
+      </div>
     `;
   });
 
