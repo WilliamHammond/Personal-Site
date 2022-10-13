@@ -3,7 +3,7 @@ title: maffei
 layout: "base.njk"
 ---
 
-# Maffei 
+# Maffei
 
 Maffei is a single level, networked coop shooter where players defend humanity against AI invaders. 
 The project is written in a combination of C++ and blueprint code for Unreal Engine 4.

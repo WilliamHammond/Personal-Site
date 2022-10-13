@@ -5,12 +5,12 @@ eleventyNavigation:
   key: Portfolio
 ---
 
-## [ Unity RTS](/portfolio/)
+## [ Unity RTS](/portfolio/unityrts)
 
 A basic Unity networked RTS I built following a tutorial.
 I made some minor changes and typically implemented things ahead of the course. The project is integrated with steam, networked using the Mirror library, and automatically formatted using csharpier.
 
-![](https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/d83f6480-ef91-4e65-a83b-7c3ffe53de5c/intro.PNG)
+![](/assets/portfolio/unityrts/intro.png)
 
 ## [ Coop Shooter](/portfolio/maffei)
 
@@ -18,7 +18,7 @@ This project was an extension of a class I did.
 The project the course focused around was a 3rd coop shooter in the style of Gears of War.
 After completing the course I made a series of changes to customize the game and learn more about Unreal.
 
-![](https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/37c05171-16ab-4101-b02c-55a8774af091/thumbnail.png)
+![](/assets/portfolio/coopgame/intro.png)
 
 # Portfolio
 
@@ -30,7 +30,7 @@ It eventually turned into you playing as Da Vinci’s apprentice, selling his wa
 
 <a href="https://williamhammond.itch.io/mech-fight">Mech Fight by williamhammond</a>
 
-![](https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/7400594c-c9bc-4127-bef9-e5e788628d5d/intro.PNG)
+![](/assets/portfolio/mechfight/intro.png)
 
 ##  2D Tactical Shooter
 
@@ -49,7 +49,7 @@ A WIP game engine I’m writing based off of Jason Gregory’s Game Engine Archi
 Currently it’s a bare-bone math library, but I did some fun stuff with the CI/CD including automatic testing, linting, builds on multiple platforms, automatic tests, and automatic micro-benchmarks with persisted results.
 Full code can be found here https://github.com/williamhammond/engine/.
 
-![](https://images.squarespace-cdn.com/content/v1/5ce82c28186bd30001708d1b/c36b2cfa-ad51-45b5-b008-c9b2c0761aac/kaspars-eglitis-fkcjWXPRAZU-unsplash.jpg)
+![](/assets/portfolio/engine/intro.jpg)
 
 ##  AI Bots
 

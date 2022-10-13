@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("./src/style.css");
   eleventyConfig.addPassthroughCopy("./src/resume/william-hammond-resume.pdf");
+  eleventyConfig.addPassthroughCopy("./assets");
   return {
     dir: {
       input: "src",
