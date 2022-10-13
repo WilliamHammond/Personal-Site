@@ -5,14 +5,14 @@ eleventyNavigation:
   key: Portfolio
 ---
 
-## [ Unity RTS](/portfolio/unityrts)
+## [Unity RTS](/portfolio/unityrts)
 
 A basic Unity networked RTS I built following a tutorial.
 I made some minor changes and typically implemented things ahead of the course. The project is integrated with steam, networked using the Mirror library, and automatically formatted using csharpier.
 
 ![](/assets/portfolio/unityrts/intro.png)
 
-## [ Coop Shooter](/portfolio/maffei)
+## [Coop Shooter](/portfolio/maffei)
 
 This project was an extension of a class I did.
 The project the course focused around was a 3rd coop shooter in the style of Gears of War.
