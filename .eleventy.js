@@ -3,9 +3,9 @@ const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy("./src/style.css");
   eleventyConfig.addPassthroughCopy("./src/resume/william-hammond-resume.pdf");
   eleventyConfig.addPassthroughCopy("./assets");
+  eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
   });
@@ -18,6 +18,9 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    templateFormats: ["md", "njk", "html", "liquid"],
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "_site",
