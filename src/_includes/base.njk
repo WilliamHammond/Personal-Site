@@ -9,16 +9,14 @@
         <title>{{ title }}</title>
     </head>
     <body>
-        <header>
-            <h1 class="home">
-                <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-            </h1>
-
+        <header class="header">
             {% set navPages = collections.all | eleventyNavigation %}
-            <ul>
+            <ul class="nav">
                 {%- for entry in navPages %}
                     <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-                        <a href="{{ entry.url }}">{{ entry.title }}</a>
+                        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+                            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                        </li>
                     </li>
                 {%- endfor %}
             </ul>
@@ -29,25 +27,23 @@
         </main>
 
         <footer class="social-footer">
-            <div class="social-footer-icons">
-                <ul class="menu simple">
-                    <li>
-                        <a href="https://www.linkedin.com/in/williamhammondse/">
-                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/williamhammond">
-                            <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://itch.io/profile/williamhammond">
-                            <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="social-footer-icons">
+                <li class="social-footer-icon">
+                    <a href="https://www.linkedin.com/in/williamhammondse/">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-footer-icon">
+                    <a href="https://github.com/williamhammond">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-footer-icon">
+                    <a href="https://itch.io/profile/williamhammond">
+                        <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </footer>
 
     </body>

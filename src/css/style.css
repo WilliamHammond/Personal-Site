@@ -11,14 +11,21 @@ header:after {
   clear: both;
 }
 
+table {
+  margin: 1em 0;
+}
+table td,
+table th {
+  padding-right: 1em;
+}
+
 .nav {
   padding: 0;
   list-style: none;
-  float: left;
+  display: flex; 
   margin-left: 1em;
 }
 .nav-item {
-  display: inline-block;
   margin-right: 1em;
 }
 .nav-item a[href]:not(:hover) {
@@ -27,4 +34,14 @@ header:after {
 .nav-item-active {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.social-footer-icons {
+  padding: 0;
+  list-style: none;
+  display: flex; 
+}
+
+.social-footer-icon{
+  margin-right: 1em;
 }
