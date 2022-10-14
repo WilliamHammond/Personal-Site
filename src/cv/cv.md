@@ -160,34 +160,6 @@ _June 2014 - December 2014_
 Designed and developed an in-house framework used for automated web GUI and web service testing.
 Logged application bugs and solved framework bugs
 
-## Education
-
-### Rochester Institute of Technology, Rochester, New York
-
-B.Sc Computer Science, Cum Laude  
-_Graduated 2017_
-
-### Awards
-
-AMA Datafest Best Use of Outside data 2017
-Dean’s List Spring 2016  
-Dean’s List Spring 2015  
-Dean’s List Fall 2013  
-Dean’s List Spring 2013  
-Freshman CS Chess AI Tournament 1st Place 2012  
-National Honor Society 2011
-
-### Classwork
-
-Computer Graphics  
-Intelligent Systems  
-Functional Programming  
-Data Mining and Statistics  
-University Physics  
-Linear Algebra  
-Analysis of Algorithms  
-Programming Language Theory
-
 <br />
 <br />
 <br />
