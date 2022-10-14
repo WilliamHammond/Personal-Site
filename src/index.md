@@ -1,15 +1,11 @@
 ---
-title: Hello World
+title: William Hammond
 layout: "base.njk"
 eleventyNavigation:
   key: Home
   order: 0
 ---
 # William Hammond
-
-  <h1 class="text-3xl text-green-800 font-bold underline">
-    Hello world!
-  </h1>
 
 Hi, I'm Will, and I'm an experienced backend web engineer.
 I've moved up and down the backend web engineering stack and worked on infrastructure, platform, and product teams.
