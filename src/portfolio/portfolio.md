@@ -23,7 +23,7 @@ After completing the course I made a series of changes to customize the game and
 
 # Portfolio
 
-## [Renaissance Mech Fight](/portfolio/mech-fight)
+## [Renaissance Mech Fight](/portfolio/mechfight)
 
 This game was made for the 2022 48 hour Global Game Jam.
 The theme of the game jam was “duality”. The original premise of the game was you play as an arms dealer selling arms to both sides of the conflict and you need to try and maximize profits without one side wiping out the other.
