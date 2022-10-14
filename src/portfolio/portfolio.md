@@ -21,8 +21,6 @@ After completing the course I made a series of changes to customize the game and
 
 <img class="max-w-full h-auto" src="/assets/portfolio/coopgame/intro.png" alt="Image of 3rd person shooter">
 
-# Portfolio
-
 ## [Renaissance Mech Fight](/portfolio/mechfight)
 
 This game was made for the 2022 48 hour Global Game Jam.
