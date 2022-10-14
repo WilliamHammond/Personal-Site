@@ -4,8 +4,8 @@ const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy("./src/resume/william-hammond-resume.pdf");
   eleventyConfig.addPassthroughCopy("./assets");
+  eleventyConfig.addPassthroughCopy("./src/js");
 
   eleventyConfig.addWatchTarget("./src/css/tailwind.config.js");
   eleventyConfig.addWatchTarget("./src/css/");

@@ -13,15 +13,39 @@
     <body>
         <header class="header">
             {% set navPages = collections.all | eleventyNavigation %}
-            <ul class="nav">
-                {%- for entry in navPages %}
-                    <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-                        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-                            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                        </li>
-                    </li>
-                {%- endfor %}
-            </ul>
+            <nav class="relative container mx-auto p-6">
+                <div class="hidden md:block">
+                    <ul class="nav list-none flex items-center">
+                        {%- for entry in navPages %}
+                            <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                                <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+                                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                                </li>
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+
+                <button id="menu-btn" class="hamburger block md:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+                <div class="md:hidden">
+                    <div id="menu" class="absolute py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                        <ul class="nav flex flex-col items-center self-end list-none">
+                            {%- for entry in navPages %}
+                                <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+                                    <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+                                        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                                    </li>
+                                </li>
+                            {%- endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
         </header>
 
         <main>
@@ -29,7 +53,8 @@
         </main>
 
         <footer class="social-footer">
-            <ul class="social-footer-icons">
+            <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"></div>
+            <ul class="social-footer-icons list-none flex">
                 <li class="social-footer-icon">
                     <a href="https://www.linkedin.com/in/williamhammondse/  aria-label="Linkedin"">
                         <i class="fa-brands fa-linkedin"></i>
@@ -46,6 +71,8 @@
                     </a>
                 </li>
             </ul>
-        </footer>
-    </body>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
 </html>

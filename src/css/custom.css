@@ -19,12 +19,6 @@ table th {
   padding-right: 1em;
 }
 
-.nav {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  margin-left: 1em;
-}
 .nav-item {
   margin-right: 1em;
 }
@@ -36,12 +30,6 @@ table th {
   text-decoration: underline;
 }
 
-.social-footer-icons {
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
 .social-footer-icon {
   margin-right: 1em;
 }
@@ -49,6 +37,53 @@ table th {
 video {
   height: 100%;
   width: 100%;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  background: white;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
 /* img {

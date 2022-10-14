@@ -26,10 +26,8 @@ In this "Annihilation" game mode, I track the count of living enemies and player
 I implemented logic for other game modes, like a wave-based survival mode, but they aren't set up with real art assets.
 {% addVideo "/assets/portfolio/coopgame/victory.mp4", "Video showing win condition" %}
 
-
 And an unsuccessful run will look like this:
 {% addVideo "/assets/portfolio/coopgame/defeat.mp4", "Video showing player defeat" %}
-
 
 ## Mechanics
 
@@ -69,7 +67,6 @@ Even while trying to re-read the documentation on redirectors for this post, I e
 Ultimately though, it ended up being worth it.
 There were a few mistakes I didn't get around to fixing but in general, it ended up being reasonable.
 
-
 Source code organization:
 
 <img class="max-w-full h-auto" src="/assets/portfolio/coopgame/source-file-organization.png" alt="Image of source file organization">
@@ -92,23 +89,19 @@ I also found blueprints particularly useful for implementing UI, although all my
 Another difficulty with blueprints was keeping them readable.
 Bad blueprints literally become spaghetti code.
 
-
 Pause Screen Logic:
 
 <img class="max-w-full h-auto" src="/assets/portfolio/coopgame/save-load-screen.png" alt="Image showing save screen">
 
-
 Life Indicator Before:
 
 <img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-before.png" alt="Image showing health indicator logic before refactor">
-
 
 But with a bit of diligence, keeping them neat wasn't too hard.
 
 Health Indicator After
 
 <img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-after.png" alt="Image showing health indicator logic after refactor">
-
 
 Screen Switching Logic
 
