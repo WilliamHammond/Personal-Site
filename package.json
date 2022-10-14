@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"eleventy --serve\" \"npx tailwindcss -c src/css/tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css --watch\"",
-    "build": "eleventy",
+    "start": "concurrently \"eleventy --serve\" \"npx tailwindcss -c tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css --watch\"",
+    "build": "concurrently \"eleventy\" \"npx tailwindcss -c tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css --watch\"",
     "bench": "DEBUG=Eleventy:Benchmark* eleventy",
     "serve": "eleventy --serve",
     "debug": "DEBUG=* eleventy",
