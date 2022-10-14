@@ -5,14 +5,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("./src/resume/william-hammond-resume.pdf");
   eleventyConfig.addPassthroughCopy("./assets");
-  eleventyConfig.addPassthroughCopy("./src/css");
+
+  eleventyConfig.addWatchTarget("./src/css/tailwind.config.js");
+  eleventyConfig.addWatchTarget("./src/css/");
+
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
   });
-  eleventyConfig.addShortcode("addVideo", function (url) {
+  eleventyConfig.addShortcode("addVideo", function (url, alt) {
     return `
       <div class="video-container">
-        <video class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
+        <video alt="${alt}" class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
             <source type="video/mp4" src="${url}#t=0.1">
         </video>
       </div>

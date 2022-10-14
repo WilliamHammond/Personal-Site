@@ -9,19 +9,19 @@ The project is written in a combination of C++ and blueprint code for Unreal Eng
 Full source code and be viewed here https://github.com/williamhammond/CoopGame/.</p>
     <h2>Overview</h2>
     <p>The game starts with a basic loading screen seen here:</p>
-    {% addVideo "/assets/portfolio/coopgame/game-start.mp4"  %}
+    {% addVideo "/assets/portfolio/coopgame/game-start.mp4", "Video of loading screen"  %}
     <p>There's some lag and incomplete rendering when a leve starts.
 To correct this, I'm pretty I need to use Unreal's level streaming model and implement a callback so that I don't switch cameras until the level is fully loaded.</p>
     <p>I relied on some built-in animations, some from a demo course, and made some aim offset animations myself.</p>
-    {% addVideo "/assets/portfolio/coopgame/simple-movement.mp4"  %}
-    {% addVideo "/assets/portfolio/coopgame/aim-animation.mp4"  %}
+    {% addVideo "/assets/portfolio/coopgame/simple-movement.mp4", "Video showing player movement" %}
+    {% addVideo "/assets/portfolio/coopgame/aim-animation.mp4", "Vdieo showing aim animation" %}
     <p>I should probably add an indication to the player on what to do next, but the only objective for this level is to blow up some robots.
 In this &quot;Annihilation&quot; game mode, I track the count of living enemies and players.
 I implemented logic for other game modes, like a wave-based survival mode, but they aren't set up with real art assets.</p>
 
-    {% addVideo "/assets/portfolio/coopgame/victory.mp4" %}
+    {% addVideo "/assets/portfolio/coopgame/victory.mp4", "Video showing condition" %}
     <p>And an unsuccessful run will look like this:</p>
-    {% addVideo "/assets/portfolio/coopgame/defeat.mp4" %}
+    {% addVideo "/assets/portfolio/coopgame/defeat.mp4", "Video showing player defeat" %}
     <h2>Mechanics</h2>
     <h3>
         <strong>Game Modes</strong>
@@ -30,7 +30,7 @@ I implemented logic for other game modes, like a wave-based survival mode, but t
 Since this mode is a little more arcadey, there are powerups on the map.
 I included health regen and super speed.
 Technically, the shooter AIs can also pick up the powerups, although they aren't coded to seek them out.</p>
-    {% addVideo "/assets/portfolio/coopgame/wave.mp4" %}
+    {% addVideo "/assets/portfolio/coopgame/wave.mp4", "Video showing horde mode "%}
     <h3>Enemies</h3>
     <p>There are two implemented enemies, the &quot;tracker bot&quot; and an AI version of the player cleverly named the &quot;Shooter Bot.&quot;
 The Shooter Bot uses Unreal's behavior tree, environment query system, and decorator system to implement its logic.
@@ -46,14 +46,13 @@ When renaming assets in Unreal, a special object called a &quot;Redirector&quot;
 The redirector acts as a shim that points references to the original name of the asset to the new name.
 You have to manually &quot;fix up&quot; the redirector to delete the original asset.
 The fixup can fail on occasion. The unexpected difficulty of renaming things has turned into a bit of a joke.</p>
-    <p><img src="/assets/portfolio/coopgame/" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/redirect-documentation-bug.png" alt="Meme poking fun at Unreal redirectors"></p>
     <p>Even while trying to re-read the documentation on redirectors for this post, I ended up encountering a redirect bug for <a href="https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors">https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors</a>  to <a href="https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/">https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/</a> which landed me here:</p>
-    <p><img src="/assets/portfolio/coopgame/redirect-documentation-bug.png" alt=""></p>
     <p>Ultimately though, it ended up being worth it.
 There were a few mistakes I didn't get around to fixing but in general, it ended up being reasonable.</p>
-    <p><img src="/assets/portfolio/coopgame/source-file-organization.png" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/source-file-organization.png" alt="Image of source file organization"></p>
     <p>Source code organization</p>
-    <p><img src="/assets/portfolio/coopgame/content-file-organization.png" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/content-file-organization.png" alt="Image showing content file organization"></p>
     <p>Asset Organization</p>
     <h3>Blueprints and Visual Programming</h3>
     <p>The relationship between Unreal's visual programming system and code probably surprised me the most.
@@ -62,17 +61,17 @@ It does make scripting the engine more accessible, but I found myself using it f
 It also affects the way you think about structuring your code.
 Even working on a solo project, I thought about how I'd structure the code to make it easier for game designers to iterate.
 Questions like, &quot;What should be exposed as a blueprint variable?&quot;, &quot;Should these methods be primarily implementable as blueprints?&quot; and &quot;Is this being overengineered for blueprints?&quot; kept coming up as I implemented things like different weapon types.</p>
+    <p>Pause Screen Logic</p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/save-load-screen.png" alt="Image showing save screen"></p>
     <p>I also found blueprints particularly useful for implementing UI, although all my UI was very simple.</p>
     <p>Another difficulty with blueprints was keeping them readable.
 Bad blueprints literally become spaghetti code.</p>
-    <p><img src="/assets/portfolio/coopgame/save-load-screen.png" alt=""></p>
-    <p>Pause Screen Logic</p>
-    <p><img src="/assets/portfolio/coopgame/health-indicator-before.png" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-before.png" alt="Image showing health indicator logic before refactor"></p>
     <p>Life Indicator Before</p>
     <p>But with a bit of diligence, keeping them neat wasn't too hard.</p>
-    <p><img src="/assets/portfolio/coopgame/health-indicator-after.png" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-after.png" alt="Image showing health indicator logic after refactor"></p>
     <p>Health Indicator After</p>
-    <p><img src="/assets/portfolio/coopgame/player-event-graph.png" alt=""></p>
+    <p><img class="max-w-full h-auto" src="/assets/portfolio/coopgame/player-event-graph.png" alt="Image showing player event graph"></p>
     <p>Screen Switching Logic</p>
     <h3>
         <strong>Debugging &amp; Testing</strong>
@@ -82,7 +81,7 @@ I've experimented with Unity's testing framework's but not Unreal's.
 I primarily relied on manual tests and Rider's debugger and print statements.
 For more specialized things like EQS and behavior trees, I learned how to set breakpoints, visually follow the execution of the tree, and set flags to get more information out of EQS as the game AI was making decisions.
 The most significant new skill I learned was how to include configurable &quot;visual logging,&quot; where I could see what different systems were doing.</p>
-    {% addVideo "/assets/portfolio/coopgame/debug.mp4"  %}
+    {% addVideo "/assets/portfolio/coopgame/debug.mp4" %}
     <h2>Credits</h2>
     <p>I still need to add this to the game itself but thanks to everyone that made the free/reasonably priced art that made this feel like kind of a real game</p>
     <ul>
