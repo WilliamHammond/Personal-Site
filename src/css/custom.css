@@ -2,23 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-header {
-  border-bottom: 1px dashed var(--color-gray-20);
-}
-header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-table {
-  margin: 1em 0;
-}
-table td,
-table th {
-  padding-right: 1em;
-}
-
 .nav-item {
   margin-right: 1em;
 }
@@ -85,8 +68,3 @@ video {
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
-
-/* img {
-    max-width:100%;
-    height:auto;
-} */

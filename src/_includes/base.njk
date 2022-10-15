@@ -15,7 +15,7 @@
             {% set navPages = collections.all | eleventyNavigation %}
             <nav class="relative container mx-auto p-6">
                 <div class="hidden md:block">
-                    <ul class="nav list-none flex items-center">
+                    <ul class="nav list-none flex items-center justify-start">
                         {%- for entry in navPages %}
                             <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
                                 <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
@@ -26,7 +26,7 @@
                     </ul>
                 </div>
 
-                <button id="menu-btn" class="hamburger block md:hidden focus:outline-none">
+                <button id="menu-btn" class="hamburger block md:hidden focus:outline-none" alt="Hamburger button to access nav links">
                     <span class="hamburger-top"></span>
                     <span class="hamburger-middle"></span>
                     <span class="hamburger-bottom"></span>
@@ -48,31 +48,31 @@
             </nav>
         </header>
 
-        <main>
+        <main class="mx-10 mt-10">
             {{ content | safe}}
         </main>
 
-        <footer class="social-footer">
-            <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"></div>
-            <ul class="social-footer-icons list-none flex">
-                <li class="social-footer-icon">
-                    <a href="https://www.linkedin.com/in/williamhammondse/  aria-label="Linkedin"">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-footer-icon">
-                    <a href="https://github.com/williamhammond" aria-label="GitHub">
-                        <i class="fa-brands fa-github" ></i>
-                    </a>
-                </li>
-                <li class="social-footer-icon">
-                    <a href="https://itch.io/profile/williamhammond" aria-label="Itch.io">
-                        <i class="fa-brands fa-itch-io"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <script src="/js/script.js"></script>
-</body>
+        <footer class="social-footer mb-10">
+            <div class="container relative mx-auto p-6">
+                <ul class="social-footer-icons list-none flex mt-10 place-items-center justify-center">
+                    <li class="social-footer-icon">
+                        <a href="https://www.linkedin.com/in/williamhammondse/  aria-label="Linkedin"">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="social-footer-icon">
+                        <a href="https://github.com/williamhammond" aria-label="GitHub">
+                            <i class="fa-brands fa-github" ></i>
+                        </a>
+                    </li>
+                    <li class="social-footer-icon">
+                        <a href="https://itch.io/profile/williamhammond" aria-label="Itch.io">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="/js/script.js"></script>
+    </body>
 </html>

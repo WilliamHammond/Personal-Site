@@ -3,16 +3,16 @@
 @tailwind base;
 @layer base {
   h1 {
-    @apply text-2xl font-extrabold;
+    @apply text-2xl font-extrabold mb-4;
   }
   h2 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold mb-3;
   }
   h3 {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold mb-2;
   }
   h4 {
-    @apply font-bold;
+    @apply font-bold mb-1;
   }
   a {
     @apply text-blue-600 underline;
@@ -20,6 +20,7 @@
   ol,
   ul {
     @apply list-disc;
+    margin-left: 10px
   }
 
   ul > li {
