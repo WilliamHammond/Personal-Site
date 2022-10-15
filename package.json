@@ -6,10 +6,7 @@
   "scripts": {
     "start": "concurrently \"eleventy --serve\" \"npx tailwindcss -c tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css --watch\"",
     "build": "npm run build:css && eleventy",
-    "build:css": "tailwindcss -m -c tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css",
-    "bench": "DEBUG=Eleventy:Benchmark* eleventy",
-    "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy",
+    "build:css": "tailwindcss --minify --config tailwind.config.js -i src/css/tailwind.css -o _site/css/tailwind.css",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -25,7 +22,7 @@
     "url": "git@github.com:williamhammond/personal-site.git"
   },
   "author": {
-    "name": "WIlliam Hammond"
+    "name": "William Hammond"
   },
   "license": "MIT",
   "devDependencies": {

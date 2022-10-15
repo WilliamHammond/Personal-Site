@@ -164,13 +164,13 @@ Logged application bugs and solved framework bugs
 <br />
 <br />
 
-| Education                                                  | Awards                                         | Classwork                   |
-| ---------------------------------------------------------- | ---------------------------------------------- | --------------------------- |
-| **Rochester Institute of Technology, Rochester, New York** | AMA Datafest Best Use of Outside data 2017     | Computer Graphics           |
-| B.Sc Computer Science, Cum Laude                           | Dean’s List Spring 2016                        | Intelligent Systems         |
-|                                                            | Dean’s List Spring 2015                        | Functional Programming      |
-|                                                            | Dean’s List Fall 2013                          | Data Mining and Statistics  |
-|                                                            | Dean’s List Spring 2013                        | University Physics          |
-|                                                            | Freshman CS Chess AI Tournament 1st Place 2012 | Linear Algebra              |
-|                                                            | National Honor Society 2011                    | Analysis of Algorithms      |
-|                                                            |                                                | Programming Language Theory |
+| Education                             | Awards                                | Classwork                   |
+| ------------------------------------- | ------------------------------------- | --------------------------- |
+| **Rochester Institute of Technology** | AMA Datafest Best Insight 2017        | Computer Graphics           |
+| **Rochester, New York**               | Dean’s List Spring 2016               | Intelligent Systems         |
+| B.Sc Computer Science, Cum Laude      | Dean’s List Spring 2015               | Functional Programming      |
+|                                       | Dean’s List Fall 2013                 | Data Mining and Statistics  |
+|                                       | Dean’s List Spring 2013               | University Physics          |
+|                                       | CS Chess AI Tournament 1st Place 2012 | Linear Algebra              |
+|                                       | National Honor Society 2011           | Analysis of Algorithms      |
+|                                       |                                       | Programming Language Theory |
