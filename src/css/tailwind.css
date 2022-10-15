@@ -1,6 +1,30 @@
 @import "./custom.css";
 
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-2xl font-extrabold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  h4 {
+    @apply font-bold;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+  ol,
+  ul {
+    @apply list-disc;
+  }
+
+  ul > li {
+    margin-left: 10px
+  }
+}
 @tailwind components;
 @tailwind utilities;
-/* @tailwind base; */
-
