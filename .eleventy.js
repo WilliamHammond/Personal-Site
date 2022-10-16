@@ -1,6 +1,19 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const markdownIt = require("markdown-it");
 const htmlmin = require("html-minifier");
+
+function htmlMinify(value, outputPath) {
+  if (outputPath && outputPath.indexOf(".html") > -1) {
+    return htmlmin.minify(value, {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true,
+      minifyCSS: true,
+    });
+  }
+  return value;
+}
+
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -9,6 +22,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/css/tailwind.config.js");
   eleventyConfig.addWatchTarget("./src/css/");
+
+  console.log("ENV" + process.env.ENVIRONMENT);
+  if (isProduction) {
+    eleventyConfig.addTransform("htmlmin", htmlMinify);
+  }
 
   eleventyConfig.addPairedShortcode("markdown", (content) => {
     return md.render(content);
