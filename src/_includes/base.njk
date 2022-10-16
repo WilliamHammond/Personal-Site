@@ -28,16 +28,14 @@
                     <span class="hamburger-middle"></span>
                     <span class="hamburger-bottom"></span>
                 </button>
-                <div class="md:hidden">
-                    <div id="menu" class="absolute py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                        <ul class="nav flex flex-col items-center self-end list-none">
-                            {%- for entry in navPages %}
-                                <li class="nav-item {% if entry.url == page.url %} nav-item-active{% endif %}">
-                                    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-                                </li>
-                            {%- endfor %}
-                        </ul>
-                    </div>
+                <div id="menu" class="hidden absolute md:hidden font-bold bg-white drop-shadow-md">
+                    <ul class="nav flex flex-col items-center list-none">
+                        {%- for entry in navPages %}
+                            <li class="nav-item {% if entry.url == page.url %} nav-item-active{% endif %}">
+                                <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                            </li>
+                        {%- endfor %}
+                    </ul>
                 </div>
 
             </nav>
