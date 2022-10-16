@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}">
         <title>{{ title }}</title>
     </head>
+
     <body>
         <header class="header">
             {% set navPages = collections.all | eleventyNavigation %}
@@ -31,13 +32,12 @@
                 <div id="menu" class="hidden absolute md:hidden font-bold bg-white drop-shadow-md">
                     <ul class="nav flex flex-col items-center list-none">
                         {%- for entry in navPages %}
-                            <li class="nav-item {% if entry.url == page.url %} nav-item-active{% endif %}">
+                            <li class="nav-item mx-10 {% if entry.url == page.url %} nav-item-active{% endif %}">
                                 <a href="{{ entry.url | url }}">{{ entry.title }}</a>
                             </li>
                         {%- endfor %}
                     </ul>
                 </div>
-
             </nav>
         </header>
 
