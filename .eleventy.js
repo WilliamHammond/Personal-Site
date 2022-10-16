@@ -85,7 +85,11 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy("./assets");
+
+  eleventyConfig.addPassthroughCopy("./assets/**/*.mp4");
+  eleventyConfig.addPassthroughCopy("./assets/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./assets/*.svg");
+  eleventyConfig.addPassthroughCopy("./assets/william-hammond-resume.pdf");
   eleventyConfig.addPassthroughCopy("./src/js");
 
   eleventyConfig.addWatchTarget("./src/css/tailwind.config.js");
