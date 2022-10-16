@@ -15,7 +15,7 @@
     @apply font-bold mb-1;
   }
   a {
-    @apply text-blue-600 underline;
+    @apply text-black underline;
   }
   ol,
   ul {

@@ -16,7 +16,7 @@
                 <div class="hidden md:block">
                     <ul class="nav list-none flex items-center justify-start">
                         {%- for entry in navPages %}
-                            <li class="nav-item {% if entry.url == page.url %} nav-item-active{% endif %}">
+                            <li class="nav-item mr-1 {% if entry.url == page.url %}font-bold underline{% endif %}">
                                 <a href="{{ entry.url | url }}">{{ entry.title }}</a>
                             </li>
                         {%- endfor %}
