@@ -107,7 +107,7 @@ module.exports = function (eleventyConfig) {
     return htmlmin.minify(
       `
       <div class="video-container">
-        <video alt="${alt}" class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
+        <video alt="${alt}" preload="none" class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
             <source type="video/mp4" src="${url}#t=0.1">
         </video>
       </div>
