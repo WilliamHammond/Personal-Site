@@ -10,10 +10,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "*.{json, md, css, njk}": [
+    "*.{json, md, css, njk, js}": [
       "prettier --write"
     ]
   },
