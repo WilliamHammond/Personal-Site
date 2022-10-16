@@ -1,5 +1,7 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const htmlmin = require("html-minifier");
+const Image = require("@11ty/eleventy-img");
+const outdent = require('outdent');
 
 function htmlMinify(value, outputPath) {
   if (outputPath && outputPath.indexOf(".html") > -1) {
@@ -12,6 +14,71 @@ function htmlMinify(value, outputPath) {
   }
   return value;
 }
+
+const stringifyAttributes = (attributeMap) => {
+  return Object.entries(attributeMap)
+    .map(([attribute, value]) => {
+      if (typeof value === 'undefined') return '';
+      return `${attribute}="${value}"`;
+    })
+    .join(' ');
+};
+
+const imageShortcode = async (
+  src,
+  alt,
+  className = undefined,
+  widths = [400, 800, 1280],
+  formats = ['webp', 'jpeg'],
+  sizes = '100vw'
+) => {
+  const imageMetadata = await Image(src, {
+    widths: [...widths, null],
+    formats: [...formats, null],
+    outputDir: '_site/assets/images',
+    urlPath: '/assets/images',
+  });
+
+  const sourceHtmlString = Object.values(imageMetadata)
+    .map((images) => {
+      const { sourceType } = images[0];
+
+      const sourceAttributes = stringifyAttributes({
+        type: sourceType,
+        srcset: images.map((image) => image.srcset).join(', '),
+        sizes,
+      });
+
+      return `<source ${sourceAttributes}>`;
+    })
+    .join('\n');
+
+  const getLargestImage = (format) => {
+    const images = imageMetadata[format];
+    return images[images.length - 1];
+  }
+
+  const largestUnoptimizedImg = getLargestImage(formats[0]);
+  const imgAttributes = stringifyAttributes({
+    src: largestUnoptimizedImg.url,
+    width: largestUnoptimizedImg.width,
+    height: largestUnoptimizedImg.height,
+    alt,
+    loading: 'lazy',
+    decoding: 'async',
+  });
+  const imgHtmlString = `<img ${imgAttributes}>`;
+
+  const pictureAttributes = stringifyAttributes({
+    class: className,
+  });
+  const picture = `<picture ${pictureAttributes}>
+    ${sourceHtmlString}
+    ${imgHtmlString}
+  </picture>`;
+
+  return outdent`${picture}`;
+};
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -28,11 +95,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addTransform("htmlmin", htmlMinify);
   }
 
-  eleventyConfig.addPairedShortcode("markdown", (content) => {
-    return md.render(content);
-  });
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addShortcode("addVideo", function (url, alt) {
-    // We need to minify here because the markdown rendere will thing this is a code block otherwise
+    // We need to minify here because the markdown renderer will think this is a code block
     // due to the indentation
     return htmlmin.minify(
       `

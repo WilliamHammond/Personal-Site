@@ -11,7 +11,7 @@ eleventyNavigation:
 A basic Unity networked RTS I built following a tutorial.
 I made some minor changes and typically implemented things ahead of the course. The project is integrated with steam, networked using the Mirror library, and automatically formatted using csharpier.
 
-<img class="max-w-full h-auto" src="/assets/portfolio/unityrts/intro.png" alt="Image of an RTS map">
+{% image "./assets/portfolio/unityrts/intro.png", "Image of an RTS map"%}
 
 ## [Coop Shooter](/portfolio/maffei)
 
@@ -19,7 +19,7 @@ This project was an extension of a class I did.
 The project the course focused around was a 3rd coop shooter in the style of Gears of War.
 After completing the course I made a series of changes to customize the game and learn more about Unreal.
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/intro.png" alt="Image of 3rd person shooter">
+{% image "./assets/portfolio/coopgame/intro.png", "Image of 3rd person shooter"%}
 
 ## [Renaissance Mech Fight](/portfolio/mechfight)
 
@@ -29,7 +29,7 @@ It eventually turned into you playing as Da Vinci’s apprentice, selling his wa
 
 <a href="https://williamhammond.itch.io/mech-fight">Mech Fight by williamhammond</a>
 
-<img class="max-w-full h-auto" src="/assets/portfolio/mechfight/intro.png" alt="Image of the mech fight game">
+{% image "./assets/portfolio/mechfight/intro.png", "Image of the mech fight game"%}
 
 ##  2D Tactical Shooter
 
@@ -48,7 +48,7 @@ A WIP game engine I’m writing based off of Jason Gregory’s Game Engine Archi
 Currently it’s a bare-bone math library, but I did some fun stuff with the CI/CD including automatic testing, linting, builds on multiple platforms, automatic tests, and automatic micro-benchmarks with persisted results.
 Full code can be found here https://github.com/williamhammond/engine/.
 
-<img class="max-w-full h-auto" src="/assets/portfolio/engine/intro.jpg" alt="Stock image of a Jet engine">
+{% image "./assets/portfolio/engine/intro.jpg", "Stock image of a Jet engine"%}
 
 ##  AI Bots
 

@@ -58,22 +58,23 @@ The redirector acts as a shim that points references to the original name of the
 You have to manually "fix up" the redirector to delete the original asset.
 The fixup can fail on occasion. The unexpected difficulty of renaming things has turned into a bit of a joke.
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/redirector-meme.png" alt="Meme poking fun at Unreal redirectors">
+{% image "./assets/portfolio/coopgame/redirector-meme.png", "Meme poking fun at Unreal redirectors"%}
+
 
 Even while trying to re-read the documentation on redirectors for this post, I ended up encountering a redirect bug for [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors)  to [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/) which landed me here:
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/redirect-documentation-bug.png" alt="Image of redireciton bug trying to get to the documentation">
+{% image "./assets/portfolio/coopgame/redirect-documentation-bug.png", "Image of redireciton bug trying to get to the documentation"%}
 
 Ultimately though, it ended up being worth it.
 There were a few mistakes I didn't get around to fixing but in general, it ended up being reasonable.
 
 Source code organization:
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/source-file-organization.png" alt="Image of source file organization">
+{% image "./assets/portfolio/coopgame/source-file-organization.png", "Image of source file organization"%}
 
 Asset Organization:
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/content-file-organization.png" alt="Image showing content file organization">
+{% image "./assets/portfolio/coopgame/content-file-organization.png", "Image showing content file organization"%}
 
 ### Blueprints and Visual Programming
 
@@ -91,21 +92,21 @@ Bad blueprints literally become spaghetti code.
 
 Pause Screen Logic:
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/save-load-screen.png" alt="Image showing save screen">
+{% image "./assets/portfolio/coopgame/save-load-screen.png", "Image showing save screen"%}
 
 Life Indicator Before:
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-before.png" alt="Image showing health indicator logic before refactor">
+{% image "./assets/portfolio/coopgame/health-indicator-before.png", "Image showing health indicator logic before refactor"%}
 
 But with a bit of diligence, keeping them neat wasn't too hard.
 
 Health Indicator After
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/health-indicator-after.png" alt="Image showing health indicator logic after refactor">
+{% image "./assets/portfolio/coopgame/health-indicator-after.png", "Image showing health indicator logic after refactor"%}
 
 Screen Switching Logic
 
-<img class="max-w-full h-auto" src="/assets/portfolio/coopgame/player-event-graph.png" alt="Image showing player event graph">
+{% image "./assets/portfolio/coopgame/player-event-graph.png", "Image showing player event graph"%}
 
 ### **Debugging & Testing**
 
