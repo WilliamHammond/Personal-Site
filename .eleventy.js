@@ -32,6 +32,7 @@ const imageShortcode = async (
   formats = ['webp', 'jpeg'],
   sizes = '100vw'
 ) => {
+  console.log("Optimizing Image: ", src);
   const imageMetadata = await Image(src, {
     widths: [...widths, null],
     formats: [...formats, null],
