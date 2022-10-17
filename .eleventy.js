@@ -2,7 +2,6 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
 const outdent = require("outdent");
-const path = require("path");
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -85,13 +84,12 @@ const imageShortcode = async (
 };
 
 function videoShortcode(url, alt) {
-  poster = path.dirname(url) + '/' + path.basename(url).split('.')[0] + '-thumbnail.jpg';
   return htmlmin.minify(
     `
       <div class="video-container">
-        <video alt="${alt}" preload="none" class="portfolioVideo" width="1280" height="720"
-          controls="controls" poster="${poster}" onclick="this.play()">
-            <source type="video/mp4" src="${url}">
+        <video alt="${alt}" preload="metadata" class="portfolioVideo" width="1280" height="720"
+          controls="controls"  onclick="this.play()">
+            <source type="video/mp4" src="${url}#t=0.1">
         </video>
       </div>
     `,
