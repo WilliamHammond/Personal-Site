@@ -1,7 +1,10 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const htmlmin = require("html-minifier");
 const Image = require("@11ty/eleventy-img");
-const outdent = require('outdent');
+const outdent = require("outdent");
+const path = require("path");
+
+const isProduction = process.env.NODE_ENV === "production";
 
 function htmlMinify(value, outputPath) {
   if (outputPath && outputPath.indexOf(".html") > -1) {
@@ -18,10 +21,10 @@ function htmlMinify(value, outputPath) {
 const stringifyAttributes = (attributeMap) => {
   return Object.entries(attributeMap)
     .map(([attribute, value]) => {
-      if (typeof value === 'undefined') return '';
+      if (typeof value === "undefined") return "";
       return `${attribute}="${value}"`;
     })
-    .join(' ');
+    .join(" ");
 };
 
 const imageShortcode = async (
@@ -29,15 +32,15 @@ const imageShortcode = async (
   alt,
   className = undefined,
   widths = [400, 800, 1280],
-  formats = ['webp', 'jpeg'],
-  sizes = '100vw'
+  formats = ["webp", "jpeg"],
+  sizes = "100vw"
 ) => {
   console.log("Optimizing Image: ", src);
   const imageMetadata = await Image(src, {
     widths: [...widths, null],
     formats: [...formats, null],
-    outputDir: '_site/assets/images',
-    urlPath: '/assets/images',
+    outputDir: "_site/assets/images",
+    urlPath: "/assets/images",
   });
 
   const sourceHtmlString = Object.values(imageMetadata)
@@ -46,18 +49,18 @@ const imageShortcode = async (
 
       const sourceAttributes = stringifyAttributes({
         type: sourceType,
-        srcset: images.map((image) => image.srcset).join(', '),
+        srcset: images.map((image) => image.srcset).join(", "),
         sizes,
       });
 
       return `<source ${sourceAttributes}>`;
     })
-    .join('\n');
+    .join("\n");
 
   const getLargestImage = (format) => {
     const images = imageMetadata[format];
     return images[images.length - 1];
-  }
+  };
 
   const largestUnoptimizedImg = getLargestImage(formats[0]);
   const imgAttributes = stringifyAttributes({
@@ -65,8 +68,8 @@ const imageShortcode = async (
     width: largestUnoptimizedImg.width,
     height: largestUnoptimizedImg.height,
     alt,
-    loading: 'lazy',
-    decoding: 'async',
+    loading: "lazy",
+    decoding: "async",
   });
   const imgHtmlString = `<img ${imgAttributes}>`;
 
@@ -81,7 +84,20 @@ const imageShortcode = async (
   return outdent`${picture}`;
 };
 
-const isProduction = process.env.NODE_ENV === "production";
+function videoShortcode(url, alt) {
+  poster = path.dirname(url) + '/' + path.basename(url).split('.')[0] + '-thumbnail.jpg';
+  return htmlmin.minify(
+    `
+      <div class="video-container">
+        <video alt="${alt}" preload="none" class="portfolioVideo" width="1280" height="720"
+          controls="controls" poster="${poster}" onclick="this.play()">
+            <source type="video/mp4" src="${url}">
+        </video>
+      </div>
+    `,
+    { collapseWhitespace: true }
+  );
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -89,6 +105,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./assets/**/*.mp4");
   eleventyConfig.addPassthroughCopy("./assets/favicon.ico");
   eleventyConfig.addPassthroughCopy("./assets/*.svg");
+  eleventyConfig.addPassthroughCopy("./assets/**/*thumbnail.jpg");
   eleventyConfig.addPassthroughCopy("./assets/william-hammond-resume.pdf");
   eleventyConfig.addPassthroughCopy("./src/js");
 
@@ -101,20 +118,7 @@ module.exports = function (eleventyConfig) {
   }
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addShortcode("addVideo", function (url, alt) {
-    // We need to minify here because the markdown renderer will think this is a code block
-    // due to the indentation
-    return htmlmin.minify(
-      `
-      <div class="video-container">
-        <video alt="${alt}" preload="none" class="portfolioVideo" width="1280" height="720" controls="controls" onclick="this.play()">
-            <source type="video/mp4" src="${url}#t=0.1">
-        </video>
-      </div>
-    `,
-      { collapseWhitespace: true }
-    );
-  });
+  eleventyConfig.addShortcode("addVideo", videoShortcode);
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
