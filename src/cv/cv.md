@@ -11,7 +11,9 @@ eleventyNavigation:
 I’ve worked on infrastructure, platform, and product teams.
 In all the roles after college, I contributed to some sort of 24/7 pager rotation.
 
-#### HubSpot, Senior Software Engineer II
+<br />
+
+### HubSpot, Senior Software Engineer II
 
 _September 2021 - April 2022_
 
@@ -27,7 +29,9 @@ Some projects included:
 - Solved long-standing GC issues with Users service
 - A lot of maintenance work like migrating integers to longs for MySQL tables reaching ID exhaustion
 
-#### HubSpot, Tech Lead
+<br />
+
+### HubSpot, Tech Lead
 
 _January 2020 - September 2021_
 
@@ -49,15 +53,19 @@ I also took on a billing group-wide leadership role to implement cross-datacente
 This involved coordinating a ~40-person engineering group, business system analysts, finance, and legal to implement systems, verify compliance and get feedback from domain experts to ensure we didn’t accidentally lose money or do something illegal.
 We managed to get the project done on schedule without losing any money or doing anything illegal.
 
-#### HubSpot, Senior Software Engineer
+<br />
+
+### HubSpot, Senior Software Engineer
 
 _October 2019 - January 2020_
 
 This was basically time to embed on the team to learn the domain before taking over as Tech Lead.
 
+<br />
+
 ---
 
-#### Mapbox, Software Engineer
+### Mapbox, Software Engineer
 
 _June 2019 - October 2020_
 
@@ -65,9 +73,11 @@ I wasn’t at Mapbox long before being poached back to HubSpot.
 While there, I worked on a pipeline to import financial data from Stripe to be queryable through Athena on S3.
 I also aided in new SKU role out.
 
+<br />
+
 ---
 
-#### Squarespace, Software Engineer
+### Squarespace, Software Engineer
 
 _March 2018 - May 2019_
 
@@ -85,9 +95,11 @@ Eventually, I moved to data infrastructure as part of a reorg since I had experi
 - Log ingestion and configurable monitoring for Redis, RabbitMQ, Kafka, and Couchbase.
 - Find and solved a longstanding performance issue with Couchbase that led to multi-second 99th response times.
 
+<br />
+
 ---
 
-#### Astronomer.io, Software Engineer
+### Astronomer.io, Software Engineer
 
 _June 2017 - February 2018_
 
@@ -100,27 +112,33 @@ While working there I:
 - Migrated Kinesis workers to Kafka.
 - Wrote the code to automate the creation of the data storage layer for Astronomer's initial hosted Apache Airflow offering.
 
+<br />
+
 ---
 
-#### RIT, Data mining Teaching Assistant
+### RIT, Data mining Teaching Assistant
 
 _January 2016 - May 2017_
 
 After taking Principles of Data Mining, I was offered a job as a teaching assistant.
 This meant a lot of grading, narking on cheaters, and running office hours for students to come in and ask questions.
 
+<br />
+
 ---
 
-#### RIT, Research Assistant
+### RIT, Research Assistant
 
 _August 2015 - June 2016_
 
 I worked at RIT’s Computational Biomedical Laboratory working on heart arrhythmias.
 Work included converting Ph.D. students’ code from c++ to MatLab, assisting in coding statistical models, and scripting conversions between different data types for heart models.
 
+<br />
+
 ---
 
-#### Hubspot, Software Engineer Co-op
+### Hubspot, Software Engineer Co-op
 
 _June 2016 - January 2017_
 
@@ -134,26 +152,32 @@ By the end of the coop, I was one of the few coops to be on their team’s pager
 - A framework lint MySQL queries for common mistakes.
   I could only partially get started on this before my internship ended.
 
+<br />
+
 ---
 
-#### iCitizen, Data Engineer Intern
+### iCitizen, Data Engineer Intern
 
 _June 2015 - August 2015_
 
 Built data visualization of voter campaign finance data to help voters better understand where a candidate’s funding comes from.
 I took data from its raw form, cleaned it, transformed it, and then visualized it. Other duties include writing scripts that are used to ingest voter file data into databases.
 
+<br />
+
 ---
 
-#### RIT, Research Computing Admin
+### RIT, Research Computing Admin
 
 _March 2014 - May 2014_
 
 Maintained Linux systems used for researching the streaming of high-resolution video in a research environment.
 
+<br />
+
 ---
 
-#### IDI Billing, QA Automation Intern
+### IDI Billing, QA Automation Intern
 
 _June 2014 - December 2014_
 
