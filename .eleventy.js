@@ -31,7 +31,7 @@ const imageShortcode = async (
   alt,
   className = undefined,
   widths = [400, 800, 1280],
-  formats = ["webp", "jpeg"],
+  formats = ["avif", "webp", "jpeg"],
   sizes = "100vw"
 ) => {
   console.log("Optimizing Image: ", src);
