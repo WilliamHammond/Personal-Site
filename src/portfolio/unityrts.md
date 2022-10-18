@@ -8,7 +8,7 @@ layout: "base.njk"
 The mechanics are straightforward; you’re given a single resource, “oil,” and you can make tanks.
 If you lose your main base, you lose.
 The last player standing wins.
-The full source can be found here https://github.com/williamhammond/RealTimeStrategy.
+The full source can be found [here](https://github.com/williamhammond/RealTimeStrategy).
 
 ## Overview
 

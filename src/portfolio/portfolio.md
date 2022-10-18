@@ -40,13 +40,13 @@ It does implement Unity unit tests, automatically runs csharpier on save, and ha
 - Runs the unit tests
 - Builds the game for web-gl and publishes it as a github page (although this is currently broken after I added networking)
 
-The full code can be found here https://github.com/williamhammond/NotWorms.
+The full code can be found [here](https://github.com/williamhammond/NotWorms).
 
 ##  Engine
 
 A WIP game engine I’m writing based off of Jason Gregory’s Game Engine Architecture, Eric Lengyel’s Foundations of Game Engine Development, and Robert Nystrom’s Game Programming Patterns.
 Currently it’s a bare-bone math library, but I did some fun stuff with the CI/CD including automatic testing, linting, builds on multiple platforms, automatic tests, and automatic micro-benchmarks with persisted results.
-Full code can be found here https://github.com/williamhammond/engine/.
+Full code can be found [here](https://github.com/williamhammond/engine/).
 
 {% image "./assets/portfolio/engine/intro.jpg", "Stock image of a Jet engine"%}
 
@@ -54,5 +54,5 @@ Full code can be found here https://github.com/williamhammond/engine/.
 
 I’ve written a few simple bots for RTS games including AoE2 and Starcraft 2.
 
-https://github.com/williamhammond/boomer-bot  
-https://github.com/williamhammond/cheesebot
+<https://github.com/williamhammond/boomer-bot>
+<https://github.com/williamhammond/cheesebot>

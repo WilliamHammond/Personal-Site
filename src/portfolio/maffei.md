@@ -7,7 +7,7 @@ layout: base.njk
 
 Maffei is a single level, networked coop shooter where players defend humanity against AI invaders.
 The project is written in a combination of C++ and blueprint code for Unreal Engine 4.
-Full source code and be viewed here https://github.com/williamhammond/CoopGame/.
+Full source code and be viewed [here](https://github.com/williamhammond/CoopGame/).
 
 ## Overview
 
@@ -59,7 +59,6 @@ You have to manually "fix up" the redirector to delete the original asset.
 The fixup can fail on occasion. The unexpected difficulty of renaming things has turned into a bit of a joke.
 
 {% image "./assets/portfolio/coopgame/redirector-meme.png", "Meme poking fun at Unreal redirectors"%}
-
 
 Even while trying to re-read the documentation on redirectors for this post, I ended up encountering a redirect bug for [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/Redirectors)  to [https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/ProductionPipelines/Redirectors/) which landed me here:
 
@@ -120,9 +119,9 @@ The most significant new skill I learned was how to include configurable "visual
 
 I still need to add this to the game itself but thanks to everyone that made the free/reasonably priced art that made this feel like kind of a real game
 
-- https://www.unrealengine.com/marketplace/en-US/product/journeyman-s-minimap
-- https://www.unrealengine.com/marketplace/en-US/product/etasphera85
-- https://www.unrealengine.com/marketplace/en-US/product/sci-fi-space-soldier-female
-- https://freesound.org/people/Zovex/sounds/237974/
-- https://freesound.org/people/Romariogrande/sounds/396231/
-- https://freesound.org/people/Yoyodaman234/sounds/166507/
+- <https://www.unrealengine.com/marketplace/en-US/product/journeyman-s-minimap>
+- <https://www.unrealengine.com/marketplace/en-US/product/etasphera85>
+- <https://www.unrealengine.com/marketplace/en-US/product/sci-fi-space-soldier-female>
+- <https://freesound.org/people/Zovex/sounds/237974/>
+- <https://freesound.org/people/Romariogrande/sounds/396231/>
+- <https://freesound.org/people/Yoyodaman234/sounds/166507/>
