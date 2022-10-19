@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 0
 ---
 
-<div class ="items-center text-center justify-center mx-auto w-6/12">
+<div class ="items-center text-center justify-center mx-auto w-10/12">
 <h1> William Hammond </h1>
 
 Hi, I'm Will, and I'm an experienced backend web engineer.
