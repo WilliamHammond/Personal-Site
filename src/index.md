@@ -11,7 +11,7 @@ eleventyNavigation:
 
 Hi, I'm Will, and I'm an experienced backend web engineer.
 I've moved up and down the backend web engineering stack and worked on infrastructure, platform, and product teams.
-Currently, though, I'm interested in learning new disciplines of computing.
+Currently, I'm interested in learning new disciplines of computing.
 I've been self-studying lower-level programming, game development, and programming languages.
 
 <br/>
