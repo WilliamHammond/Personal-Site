@@ -17,6 +17,7 @@ This is a list of tools I enjoy so that I can find the links when I need them.
   - [Wireshark](https://www.wireshark.org/)
   - [clang-format](https://llvm.org/builds/)
   - [Cyber Chef](https://gchq.github.io/CyberChef/)
+  - [Regex 101](https://regex101.com/)
   - [CPP Best practices](https://github.com/cpp-best-practices/cppbestpractices)
 - Utilities
   - [AutoHotkey](https://www.autohotkey.com/)
