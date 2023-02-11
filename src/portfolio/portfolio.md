@@ -31,6 +31,15 @@ It eventually turned into you playing as Da Vinci’s apprentice, selling his wa
 
 {% image "./assets/portfolio/mechfight/intro.png", "Image of the mech fight game"%}
 
+## [Orchard Odyssey](/portfolio/odyssey)
+
+This game was made for the 2023 48 hour Global Game Jam.
+The theme of the game jam was “roots”.
+In Orchard Odyssey, you play as a little guy stranded on a hostile world.
+You use magic trees to provide you oxygen, while you attempt to reach your acorn spaceship.
+
+{% image "./assets/portfolio/odyssey/intro.png", "Image of the Orchard Odyssey logo"%}
+
 ##  2D Tactical Shooter
 
 NotWorms is a WIP 2D Tactical shooter. Currently, only basic movement, combat, and turn logic are implemented.
