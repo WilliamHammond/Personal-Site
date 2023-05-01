@@ -13,6 +13,29 @@ In all the roles after college, I contributed to some sort of 24/7 pager rotatio
 
 <br />
 
+### One More Game, Software Engineer
+
+_October 2022 - May 2023_
+
+I worked on a competitive multiplayer game where I primarily contributed to systems that bridged the game game client to the online services. Along with the technical work, I helped players through play tests, and contributed design feedback during weekly tests.
+
+All of the systems has been alpha tested by players, and mostly stressed tested in a controlled environment up to 10,000 concurrent players.
+
+Primary Projects
+- Fixing a variety of issues that AOT compiled IL2CPP code has with serialization
+- Steam Rich Prescence features, like knowing if a friend as waiting in a queue
+- Player Inventory system to handle player stats, battlepasses, and unlocked content
+- Roslyn Analyzer to detect missing instantiated JSON serializers to prevent AOT issues
+- Forked Microsoft’s BitArray class to expose the underlying bit array for more performant serialization
+- Tooling to run unit tests against a full Unity build
+- Tests that integrated our game servers to our live service
+- Wrote the initial Orleans Hub to connect our game server to our live service
+
+I also worked on a lot of smaller fixes and improvements like 
+- More graceful error handling for our ErrorBox UI
+- Improved error handling through more consistent use of CancellationTokens throughout our APIs
+- Fixed issues in the build pipeline
+- Fixed issues with our Auth client
 ### HubSpot, Senior Software Engineer II
 
 _September 2021 - April 2022_
