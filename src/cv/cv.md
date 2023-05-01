@@ -36,6 +36,7 @@ I also worked on a lot of smaller fixes and improvements like
 - Improved error handling through more consistent use of CancellationTokens throughout our APIs
 - Fixed issues in the build pipeline
 - Fixed issues with our Auth client
+
 ### HubSpot, Senior Software Engineer II
 
 _September 2021 - April 2022_
